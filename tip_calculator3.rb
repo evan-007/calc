@@ -12,9 +12,9 @@ tip = (Float(gets.chomp!))/100
 #end
 #value(tax)
 #value(tip)
-tax_value = meal * tax  
-meal_with_tax = meal + tax_value
-tip_value = meal * tip
-total_cost = meal_with_tax + tip_value
+tax_value = (meal * tax).round(2)  
+meal_with_tax = (meal + tax_value).round(2)
+tip_value = (meal * tip).round(2)
+total_cost = (meal_with_tax + tip_value).round(2)
 
-puts "The tip is #{tip_value}, the meal with taxes is #{tax_value} and the total damage to your wallet is #{total_cost}."
+puts "The tip is #{tip_value}, the meal with taxes is #{meal_with_tax} and the total damage to your wallet is #{total_cost}."
